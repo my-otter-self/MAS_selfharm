@@ -176,7 +176,7 @@ label monika_selfharm:
 
                                             # (hold here)
 
-                                        "Yes, I want to try a calming techinque.":
+                                        "Yes, I want to try a calming technique.":
                                             m "Alright, baby."
                                             m "I want you to try the 4-7-8 breathing exercise!..."
                                             m "First of all, please straighten your back."
