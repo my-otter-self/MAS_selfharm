@@ -39,11 +39,14 @@ label mshMod_checkup_intro:
     # Start running checkups on player, weekly, with a latency of one day.
     # (Meaning that if player missed exact expected time of checkup, it'll still
     # trigger within a day; else checkup will be attempted next week.)
-    $ store.mshMod_reminder.addRecurringReminder(
-        "mshMod_checkup_reminder",
-        store.mshMod_reminder_utils.getDailyEveningDelay(),
-        store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
-    )
+
+    if store.mshMod_reminder.isReminderActive("mshMod_checkup_reminder"):
+        # NOTE: Ensure we don't have one active already.
+        $ store.mshMod_reminder.addRecurringReminder(
+            "mshMod_checkup_reminder",
+            store.mshMod_reminder_utils.getDailyEveningDelay(),
+            store.mshMod_reminder_utils.INTERVAL_WEEKLY, store.mshMod_reminder_utils.LATENCY_DAILY
+        )
 
     return "derandom|love"
 
