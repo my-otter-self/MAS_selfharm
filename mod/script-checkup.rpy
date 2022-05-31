@@ -40,7 +40,7 @@ label mshMod_checkup_intro:
     # (Meaning that if player missed exact expected time of checkup, it'll still
     # trigger within a day; else checkup will be attempted next week.)
 
-    if store.mshMod_reminder.isReminderActive("mshMod_checkup_reminder"):
+    if not store.mshMod_reminder.isReminderActive("mshMod_checkup_reminder"):
         # NOTE: Ensure we don't have one active already.
         $ store.mshMod_reminder.addRecurringReminder(
             "mshMod_checkup_reminder",
