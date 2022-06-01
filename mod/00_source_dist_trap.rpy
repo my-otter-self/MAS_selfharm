@@ -1,3 +1,8 @@
+# This is a 'source distribution trap', file that is EXCLUDED from the release package
+# and only available on the raw source code package.
+# It exists to warn 'source package' users that they are not installing the submod the right way
+# and also provide them with help link (to our Discord.)
+
 init -10000 python:
     raise RuntimeError(""
         "\n\n\n\n\n!!! PLEASE READ THIS !!!\n\n"
