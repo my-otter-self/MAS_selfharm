@@ -24,11 +24,12 @@ build/renpy/renpy.sh build/ddlc compile 2>&1 \
     | sed 's/game\/mshMod\///g'
 perl -ne 'print if (/^.*!ERROR! T_T.*$/)' build/ddlc/log/spj.log \
     | tee -a build/compile.log
-find "build/ddlc/$_mod_dir" -type f -iname '*.rpy' -delete
 
 # Scan for errors in log
 if grep -Eq '^.*Error:.*$|^File ".*", line .*:.*$' build/compile.log; then exit 1; fi
 if tail -n +9 build/ddlc/log/spj.log | grep -Eq '^.*!ERROR! T_T.*$'; then exit 1; fi
+
+find "build/ddlc/$_mod_dir" -type f -iname '*.rpyc' -delete
 
 # Move compiled files to build/out
 mkdir -p "build/out/game/Submods"
