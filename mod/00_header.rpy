@@ -17,5 +17,9 @@ init -989 python:
             user_name="my-otter-self",
             repository_name="mas_selfharm",
             submod_dir="/Submods/MAS Self Harm Submod",
-            extraction_depth=3
+            extraction_depth=3,
+            redirected_files=(
+                "README.md",
+                "LICENSE.txt"
+            )
         )
