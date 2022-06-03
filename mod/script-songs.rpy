@@ -478,7 +478,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mshMod_song_hold_on",
-            category=[mas_songs.TYPE_LONG],
+            category=[mas_songs.TYPE_SHORT],
             prompt="Hold On",
             random=True
         ),
@@ -525,7 +525,7 @@ init 5 python:
         Event(
             persistent._mas_songs_database,
             eventlabel="mshMod_song_still_breathing",
-            category=[mas_songs.TYPE_LONG],
+            category=[mas_songs.TYPE_SHORT],
             prompt="Still Breathing",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
