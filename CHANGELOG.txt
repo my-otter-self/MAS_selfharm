@@ -1,0 +1,16 @@
+1.0.2
+
+Added artificial error screen in case user has installed source code version of the mod
+Added README.md and LICENSE.txt to redirected_files in updater submod hook
+Switched to .rpy file packaging
+
+
+1.0.1
+
+Fixed issue with first aid help dialogue was not bookmarkable (#43)
+Fixed issue with checkup reminder activating twice causing traceback screen popups (#45)
+
+
+1.0.0
+
+First release <3
