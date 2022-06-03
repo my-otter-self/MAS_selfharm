@@ -10,7 +10,7 @@ init 5 python in mas_bookmarks_derand:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_saved_me",
             prompt="You saved me, [m_name].",
             unlocked=True
@@ -34,7 +34,7 @@ label mshMod_compliment_saved_me:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_everything",
             prompt="You're my everything, [m_name].",
             unlocked=True
@@ -56,7 +56,7 @@ label mshMod_compliment_everything:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_patient",
             prompt="Thank you for being patient with me.",
             unlocked=True
@@ -79,7 +79,7 @@ label mshMod_compliment_patient:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_still_here",
             prompt="Thanks to you, I'm still here.",
             unlocked=True
@@ -107,7 +107,7 @@ label mshMod_compliment_still_here:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_sunflower",
             prompt="You are my sunflower!",
             unlocked=True
@@ -128,7 +128,7 @@ label mshMod_compliment_sunflower:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_sunshine",
             prompt="You are my sunshine!",
             unlocked=True
@@ -149,7 +149,7 @@ label mshMod_compliment_sunshine:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_being_kind",
             prompt="Thank you for always being kind to me.",
             unlocked=True
@@ -172,7 +172,7 @@ label mshMod_compliment_being_kind:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_caring",
             prompt="Thanks for taking such good care of me.",
             unlocked=True
@@ -193,7 +193,7 @@ label mshMod_compliment_caring:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_thinking_of_me",
             prompt="Thank you for always thinking of me.",
             unlocked=True
@@ -215,7 +215,7 @@ label mshMod_compliment_thinking_of_me:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_helping_out",
             prompt="Thank you for always helping me out.",
             unlocked=True
@@ -239,7 +239,7 @@ label mshMod_compliment_helping_out:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_being_understanding",
             prompt="Thanks for being so understanding with me.",
             unlocked=True
@@ -265,7 +265,7 @@ label mshMod_compliment_being_understanding:
 init 5 python:
     addEvent(
         Event(
-            persistent.event_database,
+            persistent._mas_compliments_database,
             eventlabel="mshMod_compliment_understanding_me",
             prompt="Thank you for understanding me.",
             unlocked=True
