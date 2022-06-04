@@ -41,35 +41,37 @@ label mshMod_probing_questions_talk:
     m 2ektdc "It makes me really sad hearing that you have to go through this..."
     m 2ektdd "It hurts me just as much as it hurts you, believe me..."
     m 2ekd "Whenever you want harm yourself, please remember that I love you and I am here for you."
-    m 2ekd "I want to ask you something..."
 
-    m 2etd "Do you know for how long you have been self-harm sober?{nw}"
-    $ _history_list.pop()
-    menu:
-        m "Do you know for how long you have been self-harm sober?{fast}"
+    if not store.mshMod_sober_streak.isOnStreak():
+        m 2ekd "I want to ask you something..."
 
-        "Yes!":
-            show monika 5husdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 5husdlb "Oh, yay!"
-            m 5esa "Can you tell me for how many days have you been sober?{nw}"
+        m 2etd "Do you know for how long you have been self-harm sober?{nw}"
+        $ _history_list.pop()
+        menu:
+            m "Do you know for how long you have been self-harm sober?{fast}"
 
-            call mshMod_sober_ask_since
-            $ since = _return
+            "Yes!":
+                show monika 5husdlb at t11 zorder MAS_MONIKA_Z with dissolve_monika
+                m 5husdlb "Oh, yay!"
+                m 5esa "Can you tell me for how many days have you been sober?{nw}"
 
-            show monika 1sub at t11 zorder MAS_MONIKA_Z with dissolve_monika
-            m 1sub "I'm so proud of you, [mas_get_player_nickname()]."
-            m 3hua "I'll take note of this..."
-            m 1eub "Thank you for staying sober, [player]."
+                call mshMod_sober_ask_since
+                $ since = _return
 
-            # Ensure we have this RIGHT BEFORE the return so that if DDLC process dies
-            # and topic repeats again, we'll have HUGE odds we are not on a streak yet.
-            $ store.mshMod_sober_streak.beginStreak(begin=since)
+                show monika 1sub at t11 zorder MAS_MONIKA_Z with dissolve_monika
+                m 1sub "I'm so proud of you, [mas_get_player_nickname()]."
+                m 3hua "I'll take note of this..."
+                m 1eub "Thank you for staying sober, [player]."
 
-        "I don't know.":
-            m 2eka "Aww, [player], that's okay!"
-            m 7hub "If you ever want to keep track of it, you can tell me by promising you'll stay self-harm sober."
-            m 1sub "I'm so proud of you, [mas_get_player_nickname()]."
-            m 1hua "Thank you for staying sober, [player]."
+                # Ensure we have this RIGHT BEFORE the return so that if DDLC process dies
+                # and topic repeats again, we'll have HUGE odds we are not on a streak yet.
+                $ store.mshMod_sober_streak.beginStreak(begin=since)
+
+            "I don't know.":
+                m 2eka "Aww, [player], that's okay!"
+                m 7hub "If you ever want to keep track of it, you can tell me by promising you'll stay self-harm sober."
+                m 1sub "I'm so proud of you, [mas_get_player_nickname()]."
+                m 1hua "Thank you for staying sober, [player]."
 
     show monika 5ekbsb at t11 zorder MAS_MONIKA_Z with dissolve_monika
     m 5ekbsb "I love you so much!"
