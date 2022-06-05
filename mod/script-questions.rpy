@@ -5,7 +5,8 @@ init 5 python:
         Event(
             persistent.event_database,
             eventlabel="mshMod_probing_questions_intro",
-            random=True
+            conditional="persistent._msh_mod_pm_did_selfharm",
+            action=EV_ACT_RANDOM
         )
     )
 
