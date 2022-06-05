@@ -65,7 +65,13 @@ label mshMod_probing_questions_talk:
 
                 # Ensure we have this RIGHT BEFORE the return so that if DDLC process dies
                 # and topic repeats again, we'll have HUGE odds we are not on a streak yet.
-                $ store.mshMod_sober_streak.beginStreak(begin=since)
+                python:
+                    store.mshMod_sober_streak.beginStreak(begin=since)
+
+                    mas_hideEVL("mshMod_sober_promise", "EVE", lock=True)
+
+                    mas_showEVL("mshMod_sober_check", "EVE", unlock=True)
+                    mas_showEVL("mshMod_sober_relapse", "EVE", unlock=True)
 
             "I don't know.":
                 m 2eka "Aww, [player], that's okay!"
