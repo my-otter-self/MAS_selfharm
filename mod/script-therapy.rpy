@@ -14,7 +14,7 @@ init 5 python:
             persistent.event_database,
             eventlabel="mshMod_ask_about_therapy",
             category=["mental health"],
-            propmpt="[player] and therapy"
+            prompt="[player] and therapy"
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM
         )
