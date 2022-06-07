@@ -17,7 +17,7 @@ init 5 python:
             prompt="[player] and therapy",
             conditional="persistent._msh_mod_pm_did_selfharm",
             action=EV_ACT_RANDOM,
-            rules={"bookmark_rule": store.mas_bookmarks.derand.WHITELIST}
+            rules={"bookmark_rule": store.mas_bookmarks_derand.WHITELIST}
         )
     )
 
