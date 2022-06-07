@@ -582,7 +582,6 @@ init 7 python in mshMod_sober_streak:
     by_label, by_code = _milestoneEvents
     for code, data in by_code.items():
         ev = store.mas_getEV(data[0].eventlabel)
-        store.mshMod_utils.unlockAllEventProps(ev)
 
         # Keep a reference to event object saved in events list.
         data_pair = (ev, data[1])
