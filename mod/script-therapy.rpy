@@ -16,7 +16,8 @@ init 5 python:
             category=["mental health"],
             prompt="[player] and therapy"
             conditional="persistent._msh_mod_pm_did_selfharm",
-            action=EV_ACT_RANDOM
+            action=EV_ACT_RANDOM,
+            rules={"bookmark_rule": store.mas_bookmarks.derand.WHITELIST}
         )
     )
 
